@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NEON Overlays Studio — Editor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/landing.css">
+<link rel="stylesheet" href="css/editor.css">
+</head>
+<body class="editor">
+<div class="ed-top">
+  <a class="brand" href="index.html"><span class="mark">N</span>NEON STUDIO</a>
+  <div class="actions">
+    <a class="btn ghost small" href="index.html">← Home</a>
+    <button class="btn primary small" id="copyLive">📋 Copy Overlay URL</button>
+    <span class="copied" id="copied1">Copied!</span>
+  </div>
+</div>
+<div class="ed-wrap">
+  <div class="ed-panel">
+    <div class="grp">
+      <label>Identity</label>
+      <div class="field"><label>Streamer name</label><input type="text" id="f-name"></div>
+      <div class="field"><label>Social handle</label><input type="text" id="f-social"></div>
+      <div class="field"><label>Second handle (optional)</label><input type="text" id="f-social2"></div>
+    </div>
+    <div class="grp">
+      <label>Theme</label>
+      <div class="swrow" id="themeRow"></div>
+    </div>
+    <div class="grp">
+      <label>Follower goal</label>
+      <div class="field"><label>Label</label><input type="text" id="f-goalLabel"></div>
+      <div class="row2">
+        <div class="field"><label>Current</label><input type="number" id="f-goalCur"></div>
+        <div class="field"><label>Target</label><input type="number" id="f-goalTarget"></div>
+      </div>
+    </div>
+    <div class="grp">
+      <label>Widgets</label>
+      <div class="toggles">
+        <div class="tg"><span>Camera frame</span><div class="switch" data-key="showCam"></div></div>
+        <div class="tg"><span>Follower goal</span><div class="switch" data-key="showGoal"></div></div>
+        <div class="tg"><span>Social handles</span><div class="switch" data-key="showSocial"></div></div>
+        <div class="tg"><span>Clock</span><div class="switch" data-key="showClock"></div></div>
+        <div class="tg"><span>Ticker</span><div class="switch" data-key="showTicker"></div></div>
+      </div>
+    </div>
+    <div class="grp">
+      <label>Scene</label>
+      <div class="seg">
+        <button data-scene="live">Live</button>
+        <button data-scene="starting">Starting</button>
+        <button data-scene="brb">BRB</button>
+        <button data-scene="ending">Ending</button>
+      </div>
+      <div id="sceneFields" style="margin-top:12px;display:none">
+        <div class="field"><label>Scene title</label><input type="text" id="f-title"></div>
+        <div class="field"><label>Subtitle</label><input type="text" id="f-subtitle"></div>
+        <div class="field"><label>Countdown (minutes)</label><input type="number" id="f-cdMin"></div>
+      </div>
+    </div>
+    <div class="grp">
+      <label>Scene URLs for OBS</label>
+      <div class="seg" style="flex-direction:column;gap:8px">
+        <button id="copyStarting">📋 Copy "Starting Soon" URL</button>
+        <button id="copyBrb">📋 Copy "Be Right Back" URL</button>
+        <button id="copyEnding">📋 Copy "Ending" URL</button>
+      </div>
+      <span class="copied" id="copied2">Copied!</span>
+    </div>
+  </div>
+  <div class="ed-preview">
+    <div class="pv-bar">
+      <span class="lbl">LIVE PREVIEW — TEST ALERTS:</span>
+      <div class="alert-btns">
+        <button class="btn ghost small" data-alert="follow">❤️ Follow</button>
+        <button class="btn ghost small" data-alert="sub">⭐ Sub</button>
+        <button class="btn ghost small" data-alert="donation">💎 Tip</button>
+        <button class="btn ghost small" data-alert="raid">🚀 Raid</button>
+      </div>
+    </div>
+    <div class="pv-stage"><div class="pv-frame"><iframe id="pv" title="Overlay preview"></iframe></div></div>
+  </div>
+</div>
+<script type="module" src="js/editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NEON Overlays Studio — Broadcast-grade stream overlays</title>
+<meta name="description" content="Create broadcast-grade animated stream overlays for Twitch, YouTube and Kick. No design skills, 100% in your browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+<canvas id="fx"></canvas>
+<div class="scrim"></div>
+
+<nav class="nav">
+  <div class="container">
+    <a class="brand" href="#top"><span class="mark">N</span>NEON</a>
+    <div class="links">
+      <a href="#features">Features</a>
+      <a href="#themes">Themes</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn small primary" href="editor.html">Open Studio</a>
+    </div>
+    <div class="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<main>
+<header class="hero" id="top">
+  <div class="container">
+    <span class="tag reveal">⚡ For Twitch · YouTube · Kick</span>
+    <h1 class="reveal">Make your stream look like a <span class="grad-text">$10k production</span></h1>
+    <p class="lead reveal">Design animated, broadcast-grade overlays in your browser. Pick a neon theme, customize, copy one URL into OBS. That's it.</p>
+    <div class="cta reveal">
+      <a class="btn primary" href="editor.html">🎨 Open the Studio →</a>
+      <a class="btn ghost" href="overlay.html?demo=1&scene=live" target="_blank">▶ Watch live demo</a>
+    </div>
+    <div class="mock reveal">
+      <span class="badge">LIVE OVERLAY PREVIEW</span>
+      <iframe src="overlay.html?demo=1&scene=live&name=NOVA&social=@novaplays" title="Live overlay demo" loading="lazy"></iframe>
+    </div>
+  </div>
+</header>
+
+<div class="marquee">
+  <div><span>NEON</span><span>• ANIMATED ALERTS</span><span>• FOLLOWER GOALS</span><span>• STARTING SOON</span><span>• BE RIGHT BACK</span><span>• 6 THEMES</span><span>• OBS READY</span><span>NEON</span><span>• ANIMATED ALERTS</span><span>• FOLLOWER GOALS</span><span>• STARTING SOON</span><span>• BE RIGHT BACK</span><span>• 6 THEMES</span><span>• OBS READY</span></div>
+</div>
+
+<section id="features">
+  <div class="container">
+    <div class="head reveal">
+      <span class="tag">Features</span>
+      <h2>Everything your stream needs</h2>
+      <p>One studio, zero design skills, infinite drip.</p>
+    </div>
+    <div class="grid">
+      <div class="feature reveal"><div class="ico">🔔</div><h3>Animated alerts</h3><p>Follows, subs, tips and raids pop in with neon glow and a clean queue.</p></div>
+      <div class="feature reveal"><div class="ico">🎯</div><h3>Follower goals</h3><p>An animated goal bar that fills up live as your community grows.</p></div>
+      <div class="feature reveal"><div class="ico">🎬</div><h3>Full scenes</h3><p>Starting Soon with a live countdown, Be Right Back and Stream Ending.</p></div>
+      <div class="feature reveal"><div class="ico">🎨</div><h3>6 neon themes</h3><p>Cyber, Synthwave, Toxic, Crimson, Aurora and Gold Lux — swap in a click.</p></div>
+      <div class="feature reveal"><div class="ico">🖥️</div><h3>OBS ready</h3><p>Transparent browser source. Paste one URL, set 1920×1080, done.</p></div>
+      <div class="feature reveal"><div class="ico">⚡</div><h3>Instant preview</h3><p>Live preview as you type, with test-alert buttons built in.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="themes">
+  <div class="container">
+    <div class="head reveal">
+      <span class="tag">Themes</span>
+      <h2>Pick your <span class="grad-text">vibe</span></h2>
+      <p>Click any theme to open it in the Studio.</p>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div class="head reveal">
+      <span class="tag">Pricing</span>
+      <h2>Start free. Upgrade when you blow up.</h2>
+    </div>
+    <div class="prices">
+      <div class="price reveal">
+        <h3>FREE</h3>
+        <div class="amt">$0</div>
+        <ul><li>All 6 themes</li><li>All scenes</li><li>Manual + demo alerts</li><li>OBS export</li></ul>
+        <a class="btn block" href="editor.html">Get started</a>
+      </div>
+      <div class="price feat reveal">
+        <h3>PRO</h3>
+        <div class="amt">$9<small>/mo</small></div>
+        <ul><li>Everything in Free</li><li>Live Twitch / YouTube alerts</li><li>Alert sounds</li><li>Custom fonts</li></ul>
+        <a class="btn primary block" href="editor.html">Go Pro</a>
+      </div>
+      <div class="price reveal">
+        <h3>STUDIO</h3>
+        <div class="amt">$19<small>/mo</small></div>
+        <ul><li>Everything in Pro</li><li>Logo upload</li><li>Unlimited saved overlays</li><li>Priority support</li></ul>
+        <a class="btn block" href="editor.html">Go Studio</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <a class="brand" href="#top"><span class="mark">N</span>NEON STUDIO</a>
+    <p>Built for streamers · &copy; <span id="year">2026</span> · MIT License</p>
+  </div>
+</footer>
+
+<script type="module" src="js/landing.js"></script>
+</body>
+</html>
