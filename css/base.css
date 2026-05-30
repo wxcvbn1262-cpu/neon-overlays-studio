@@ -1,0 +1,31 @@
+:root{
+  --bg:#06070d; --bg2:#0b0e1a;
+  --c1:#22e1ff; --c2:#8a5cff; --accent:#3dff9e; --pink:#ff4d9d;
+  --text:#eaf2ff; --muted:#8fa3c8;
+  --glass:rgba(255,255,255,.05); --stroke:rgba(255,255,255,.12);
+  --radius:18px;
+  --font:'Rajdhani',system-ui,sans-serif;
+  --display:'Orbitron',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.num{font-family:var(--display);font-variant-numeric:tabular-nums}
+.container{width:min(1180px,92vw);margin:0 auto}
+.grad-text{background:linear-gradient(120deg,var(--c1),var(--c2),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--c1);padding:6px 14px;border:1px solid var(--stroke);border-radius:40px;background:var(--glass)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;border:1px solid var(--stroke);background:var(--glass);backdrop-filter:blur(14px);color:var(--text);padding:13px 26px;border-radius:40px;font-family:var(--font);font-size:15px;letter-spacing:1px;font-weight:700;transition:.2s;text-align:center}
+.btn:hover{border-color:var(--c1);box-shadow:0 0 24px rgba(34,225,255,.28);transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn.primary{background:linear-gradient(135deg,var(--c1),var(--c2));border:none;color:#04070f}
+.btn.ghost{background:transparent}
+.btn.small{padding:9px 18px;font-size:13px}
+.btn.block{width:100%}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+::selection{background:var(--c1);color:#04070f}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--c1),var(--c2));border-radius:10px}
